@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link href="/latiko-com/_img/stylesheets/flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="/latiko-com/_img/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    <link href="/latiko-com/_img/stylesheets/slick.css" rel="stylesheet" type="text/css" />
+    <link href="/latiko-com/_img/stylesheets/slick-theme.css" rel="stylesheet" type="text/css" />
+    <script src="/latiko-com/_img/js/jquery-1.11.3.min.js"></script>
+    <script src="/latiko-com/_img/js/jquery.flexslider-min.js"></script>
+    <script src="/latiko-com/_img/js/imgLiquid.js"></script>
+    <script src="/latiko-com/_img/js/matchheight.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="/latiko-com/_img/js/gmap.js"></script>
+    <script src="/latiko-com/_img/js/mobile-menu.js"></script>
+    <script src="/latiko-com/_img/js/slick.js"></script>
+
+
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlsContainer: ".flex-container"
+            });
+        });
+        $(document).ready(function() {
+
+            $(".slider-menu").find("#menu0").remove();
+            $(".slider-menu").find("a").wrapInner("<span class='middle'></span>");
+
+            $(".slider-menu ul").slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+
+
+                        }
+                    }, {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+
+                ]
+
+                // You can unslick at a given breakpoint now by adding:
+
+
+
+            });
+
+
+
+            $(".blogSummaryImage").addClass("imgLiquidFill");
+            $(".imgLiquidFill").imgLiquid();
+
+
+
+
+
+
+            //setPadding();
+
+        });
+
+        //$(window).resize(function() {
+        //setPadding();
+        // });
+
+        //function setPadding() {
+        //hh = $("header").outerHeight();
+        //viewportWidth = window.innerWidth;
+        //if (viewportWidth < 600) {
+        //   $(".flex-container").css("paddingTop", hh);
+        // } else {
+        //    $(".flex-container").removeAttr("style");
+        // }
+        // }
+
+    </script>
+
+
+    <title></title>
+</head>
+
+<body>
+    <div class="toplogo"><img src="/latiko-com/_img/logo.png"></div>
+    <div class="flex-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li class="imgLiquidFill">
+                    <p><img src="/latiko-com/_img/boat1.jpg" alt="" /></p>
+
+
+                </li>
+                <li class="imgLiquidFill">
+                    <p><img src="/latiko-com/_img/boat-2.jpg" alt="" /></p>
+
+
+
+
+                </li>
+           
+                <li class="imgLiquidFill">
+                    <p><img src="/latiko-com/_img/boat-4.jpg" alt="" /></p>
+
+
+
+                </li>
+                <li class="imgLiquidFill">
+                    <p><img src="/latiko-com/_img/boat-5.jpg" alt="" /></p>
+
+
+
+                </li>
+                <li class="imgLiquidFill">
+                    <p><img src="/latiko-com/_img/boat-6.jpg" alt="" /></p>
+
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menu-container">
+        <div class="slider-menu">
+            <ul class="menu" id="main">
+                <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
+                <li id="menu1"><a title="About us" href="#">Introduction</a></li>
+                <li id="menu2"><a title="About us" href="#">Gallery</a></li>
+                <li id="menu3"><a title="Our process" href="#">Specification</a></li>
+                <li id="menu4"><a title="Our location" href="#">The Crew</a></li>
+                <li id="menu5"><a title="Our history" href="#">Charter</a></li>
+                <li id="menu6"><a title="Contact" href="#">VIP</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+      <div class="copyright">&copy; My Latiko 2015 | Website Designed by The Smarter Web Company</div>
+
+        <nav class="mobile-menu">
+
+
+            <ul class="menu" id="main">
+                <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
+                <li id="menu1"><a title="About us" href="#">Introduction</a></li>
+                <li id="menu2"><a title="About us" href="#">Gallery</a></li>
+                <li id="menu3"><a title="Our process" href="#">Specification</a></li>
+                <li id="menu4"><a title="Our location" href="#">The Crew</a></li>
+                <li id="menu5"><a title="Our history" href="#">Charter</a></li>
+                <li id="menu6"><a title="Contact" href="#">VIP</a></li>
+            </ul>
+        </nav>
+        <button class="menu_button"></button>
+
+    </footer>
+
+
+</body>
+
+</html>
