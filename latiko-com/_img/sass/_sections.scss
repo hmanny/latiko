@@ -1,0 +1,323 @@
+    .toplogo {
+        max-width: 75%;
+        height: auto;
+        padding: 20px;
+        @include breakpoint($lg) {
+            padding: 40px;
+        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        img {
+            max-width: 100%;
+        }
+    }
+    header {
+        background: url(/latiko-com/_img/header-bg.jpg);
+        background-position: center 45%;
+        background-size: cover;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        padding: 15px 20px 10px;
+        @include breakpoint($lg) {
+            position: relative;
+            max-height: 100%;
+            height: auto;
+        }
+        @include breakpoint($lg) {
+            padding: 30px 20px 20px;
+        }
+        @include breakpoint($xxlg) {
+            padding: 35px 26px 25px;
+        }
+        display: block;
+        z-index: 100;
+        .logo {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+            @include breakpoint($lg) {
+                width: 30%;
+            }
+            img {
+                max-width: 300px;
+                max-width: 100%;
+            }
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    .flex-container {
+        @include breakpoint($md) {
+            display: block;
+        }
+        .flexslider {
+            border: none;
+            .slides img {
+                width: 100%;
+            }
+            li {
+                height: 70vh;
+                min-height: 300px;
+            }
+        }
+        .flex-direction-nav li a {
+            background: none;
+            height: 100px;
+            width: 100px;
+            opacity: 0;
+            @include transition(opacity, 1s);
+            @include breakpoint($lg) {
+                @include transform(translateY(-50%));
+            }
+        }
+        .flex-direction-nav li .prev {
+            display: none;
+            @include breakpoint($md-lg) {
+                display: block;
+            }
+            left: 10px;
+            background: url("/latiko-com/_img/theme/left.png") no-repeat;
+            background-position: center center;
+            margin-left: 0;
+        }
+        .flex-direction-nav li .next {
+            display: none;
+            @include breakpoint($md-lg) {
+                display: block;
+            }
+            right: 10px;
+            background: url("/latiko-com/_img/theme/right.png") no-repeat;
+            background-position: center center;
+            margin-right: 0;
+        }
+        p.flex-caption {
+            display: none;
+            @include breakpoint($md) {
+                display: block;
+            }
+            width: 66%;
+            max-width: 790px;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            @include transform(translateY(-50%) translateX(-50%));
+            background: none;
+            bottom: inherit;
+            font-size: 34px;
+            @include breakpoint($md-lg) {
+                font-size: 38px;
+            }
+            @include breakpoint($lg) {
+                font-size: 48px;
+            }
+            line-height: 1.2;
+            font-family: $condensed;
+            text-shadow: $shadow;
+            strong {
+                font-family: $condensedBold;
+            }
+            button {
+                padding: 13px 20px;
+                @include breakpoint($xlg) {
+                    padding: 28px 70px;
+                }
+                margin-top: 18px;
+                font-size: 17px;
+                @include breakpoint($lg) {
+                    margin-top: 45px;
+                    font-size: 20px;
+                }
+                background: $light-teal;
+                font-family: $medium;
+                &:hover {
+                    background: $dark-pink;
+                }
+            }
+        }
+        &:hover {
+            .flex-direction-nav li a {
+                opacity: 1;
+            }
+        }
+    }
+    .text-area {
+        padding: 140px 10px 50px;
+        min-height: 50vh;
+        text-align: center;
+        @include breakpoint($lg) {
+            text-align: left;
+        }
+        @include breakpoint($lg) {
+            padding: 55px 10px;
+            margin: 0;
+        }
+        .text {
+            font-size: 16px;
+            color: $white;
+            line-height: 1.6;
+            h1 {
+                font-family: $questa;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 24px;
+                font-family: $questa;
+                margin-bottom: 20px;
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .menu-container {
+        .slider-menu {
+            ul {
+                li {
+                    height: 30vh;
+                    min-height: 150px;
+                    text-align: center;
+                    position: relative;
+                    border: 3px solid #111;
+                    a {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        outline: none;
+                        @include transition(background 0.5s);
+                        color: $white;
+                        font-family: $questa;
+                        text-transform: uppercase;
+                        font-size: 20px;
+                        @include breakpoint($md) {
+                            font-size: 22px;
+                        }
+                        @include breakpoint($lg) {
+                            font-size: 26px;
+                        }
+                        @include breakpoint($xlg) {
+                            font-size: 34px;
+                        }
+                        background: rgba(0,
+                        0,
+                        6,
+                        0.3);
+                        &:hover {
+                            background: rgba(0, 0, 6, 0.8);
+                        }
+                        span.middle {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%) translateX(-50%));
+                            text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                    background-size: cover;
+                    background-position: center center;
+                }
+                #slide1 {
+                    background-image: url(/latiko-com/_img/intro-bg.jpg);
+                }
+                #slide2 {
+                    background-image: url(/latiko-com/_img/gallery-bg.png);
+                }
+                #slide3 {
+                    background-image: url(/latiko-com/_img/spec-bg.png);
+                }
+                #slide4 {
+                    background-image: url(/latiko-com/_img/crew.png);
+                }
+                #slide5 {
+                    background-image: url(/latiko-com/_img/charter.png);
+                }
+                #slide6 {
+                    background-image: url(/latiko-com/_img/boat-6.jpg);
+                }
+            }
+            button {
+                z-index: 100;
+            }
+        }
+    }
+    footer {
+        .logo {
+            padding: 10px;
+            img {
+                max-width: 100%;
+            }
+            @include breakpoint($lg) {
+                display: inline-block;
+                width: 26%;
+                vertical-align: middle;
+            }
+        }
+        .copyright {
+            width: 100%;
+            padding-bottom: 20px;
+            text-align: center;
+            color: $white;
+            padding-right: 20px;
+            font-family: $regular;
+            font-size: 15px;
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+    .login {
+        .secureLoginFormUsername,
+        .secureLoginFormUsernameFieldInput,
+        .secureLoginFormPassword,
+        .secureLoginFormPasswordFieldInput {
+            width: 100%;
+            height: 25px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            font-family: $questa;
+            font-size: 16px;
+        }
+        .secureLoginFormUsername,
+        .secureLoginFormUsernameFieldInput,
+        .secureLoginFormPassword,
+        .secureLoginFormPasswordFieldInput {
+            width: 100%;
+            height: 35px;
+            margin: 0px 0px 10px;
+            text-align: left;
+            font-family: $questa;
+            font-size: 16px;
+        }
+        .secureLoginFormUsernameFieldInput,
+        .secureLoginFormPasswordFieldInput {
+            padding: 5px;
+        }
+        width: 300px;
+        margin: 40px auto 0px;
+        #secureLoginFormSubmitButton {
+            @extend button.spec;
+        }
+        .error {
+            width: 100%;
+            height: 25px;
+            margin: 0px 0px 20px;
+            text-align: left;
+            font-family: $questa;
+            font-size: 16px;
+        }
+    }
